@@ -3,6 +3,8 @@ Covid-19 dashboard web app built with Flask &amp; Bokeh in Python.
 
 The application contains a page for the USA and a page for Florida.
 
+Fetches data from https://github.com/CSSEGISandData/COVID-19
+
 ---
 
 USA
