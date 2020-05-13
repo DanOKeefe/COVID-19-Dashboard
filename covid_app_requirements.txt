@@ -1,0 +1,7 @@
+flask
+pandas
+numpy
+matplotlib
+datetime
+bokeh
+geopandas
