@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" >
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- dataTables js -->
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <!-- Font Awesome -->
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <!-- Bootstrap js -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    
+  
+    <!--
+        <link href="{{ url_for('static', filename='styles/style.css')}}" rel="stylesheet">
+    -->
+    {% endblock %}
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    {% block navbar %}
+    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+        <div class="container-fluid mb-1 mt-1">
+        <a class="navbar-brand" href="{{ url_for('index') }}">
+            <img src="{{ url_for('static', filename='images/t45.jpg') }}" height="40" width="40">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('index') }}">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('maintenance') }}">Maintenance</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('flight') }}">Flight</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('rcb') }}">RCB</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('mafs') }}">MAFs</a>
+            </li>
+            </ul>
+        </div> 
+        </div>
+    </nav>
+    {% endblock %}
+    <!-- Page content (to be overriden by child templates)-->
+    <div class="content">{% block content %}{% endblock %}</div>
+  </body>
