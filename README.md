@@ -5,6 +5,8 @@ The application contains a page for the USA and a page for Florida.
 
 Fetches data from https://github.com/CSSEGISandData/COVID-19
 
+Screenshots:
+
 ---
 
 USA
